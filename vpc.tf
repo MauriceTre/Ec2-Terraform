@@ -11,8 +11,8 @@ resource "aws_subnet" "kugelfisch1" {
 }
 
 resource "aws_subnet" "kugelfisch2" {
-  vpc_id     = aws_vpc.kugel.id
-  cidr_block = "10.0.4.0/24"
+  vpc_id            = aws_vpc.kugel.id
+  cidr_block        = "10.0.4.0/24"
   availability_zone = "eu-central-1b"
 }
 
@@ -24,7 +24,7 @@ resource "aws_subnet" "kugelfisch1privat" {
 resource "aws_subnet" "kugelfisch2privat" {
   vpc_id     = aws_vpc.kugel.id
   cidr_block = "10.0.3.0/24"
-  
+
 }
 
 resource "aws_internet_gateway" "Meer" {
@@ -45,6 +45,6 @@ resource "aws_route_table_association" "freiheit" {
 resource "aws_route_table_association" "freiheit2" {
   route_table_id = aws_route_table.fluss.id
   subnet_id      = aws_subnet.kugelfisch2.id
-  
+
 }
 
