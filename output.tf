@@ -9,5 +9,5 @@ output "Arn" {
   value = aws_security_group.allow_ingress.arn
 }
 output "aws_dynamodb_table" {
-  value = aws_dynamodb_table.tesla.name
+  value = aws_dynamodb_table.Mond.name
 }
