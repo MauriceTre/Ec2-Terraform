@@ -1,4 +1,4 @@
-resource "aws_dynamodb_table" "tesla" {
+resource "aws_dynamodb_table" "Mond" {
   name           = "tesla-table"
   read_capacity  = 5
   write_capacity = 5
